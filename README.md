@@ -45,4 +45,35 @@
     - There are multiple ways to load model using ONNX Runtime for React Native. In this tutorial, model is built into the app as an asset. See also [other tutorial][TBD]
     - It's required to use a ORT format model (ie. a model file with `.ort` extension). See also [links to ORT format model][TBD]
 
+4. Generate Android project
 
+    1. Set Android package name. In this tutorial we use `com.example.helloworld` as package name.
+
+        In `<SOURCE_ROOT>/app.json`, add the following item to section `expo.android`:
+        ```
+        "package": "com.example.helloworld"
+        ```
+
+    2. Run the following command in `<SOURCE_ROOT>` to generate Android project:
+        ```sh
+        expo prebuild -p android
+        ```
+
+    3. Add `onnxruntime-react-native` to gradle depencencies.
+
+        In `<SOURCE_ROOT>/android/app/build.gradle`, add the following line to section `dependencies`:
+        ```
+        implementation project(':onnxruntime-react-native')
+        ```
+
+    **NOTE:**
+    - iOS TBD
+
+5. Add code in `App.tsx` to use onnxruntime-react-native.
+
+    Please refer to the file content for details.
+
+6. Run the following command to launch:
+    ```sh
+    expo run:android
+    ```
