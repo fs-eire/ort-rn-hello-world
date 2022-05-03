@@ -15,6 +15,7 @@
    ```sh
    cd <SOURCE_ROOT>
    expo init . -t expo-template-blank-typescript
+   yarn
    ```
 
    **NOTE:**
