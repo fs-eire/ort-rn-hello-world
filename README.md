@@ -71,6 +71,11 @@
         pod 'onnxruntime-react-native', :path => '../node_modules/onnxruntime-react-native'
         ```
 
+        Run the following command in `<SOURCE_ROOT>/ios` to install:
+        ```sh
+        pod install
+        ```
+
 5. Add code in `App.tsx` to use onnxruntime-react-native.
 
     Please refer to the file content for details.
