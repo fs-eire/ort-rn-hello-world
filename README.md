@@ -46,35 +46,51 @@
     - There are multiple ways to load model using ONNX Runtime for React Native. In this tutorial, model is built into the app as an asset. See also [other tutorial][TBD]
     - It's required to use a ORT format model (ie. a model file with `.ort` extension). See also [links to ORT format model][TBD]
 
-4. Setup Android and iOS project
+4. Setup Android and iOS project.
 
-    1. Run the following command in `<SOURCE_ROOT>` to generate Android and iOS project:
-        ```sh
-        expo prebuild
-        ```
+    In this step, we setup the generated Android/iOS project to consume ONNX Runtime. There are 2 ways to setup the project:
 
-        **NOTE:**
-        - Expo will ask the Android package name and iOS bundle identifier. In this tutorial we use `com.example.helloworld` as package name and bundle identifier.
-        - The package name (Android) and bundle ID (iOS) will be added in your `<SOURCE_ROOT>/app.json` automatically by expo.
+    - (recommended) using NPM package `onnxruntime-react-native` as an expo plugin.
+        1. In `<SOURCE_ROOT>/app.json`, add the following line to section `expo`:
+           ```
+           "plugins": ["onnxruntime-react-native"],
+           ```
+        2. Run the following command in `<SOURCE_ROOT>` to generate Android and iOS project:
+            ```sh
+            expo prebuild
+            ```
 
-    2. Add `onnxruntime-react-native` to gradle depencencies.
+        The generated project files will be updated automatically.
 
-        In `<SOURCE_ROOT>/android/app/build.gradle`, add the following line to section `dependencies`:
-        ```
-        implementation project(':onnxruntime-react-native')
-        ```
+    - setup manually.
 
-    3. Add `onnxruntime-react-native` to CocoaPods dependencies.
+        1. Run the following command in `<SOURCE_ROOT>` to generate Android and iOS project:
+            ```sh
+            expo prebuild
+            ```
 
-        In `<SOURCE_ROOT>/ios/Podfile`, add the following line to section `target 'OrtReactNativeHelloWorld'`:
-        ```
-        pod 'onnxruntime-react-native', :path => '../node_modules/onnxruntime-react-native'
-        ```
+            **NOTE:**
+            - Expo will ask the Android package name and iOS bundle identifier. In this tutorial we use `com.example.helloworld` as package name and bundle identifier.
+            - The package name (Android) and bundle ID (iOS) will be added in your `<SOURCE_ROOT>/app.json` automatically by expo.
 
-        Run the following command in `<SOURCE_ROOT>/ios` to install:
-        ```sh
-        pod install
-        ```
+        2. Add `onnxruntime-react-native` to gradle depencencies.
+
+            In `<SOURCE_ROOT>/android/app/build.gradle`, add the following line to section `dependencies`:
+            ```
+            implementation project(':onnxruntime-react-native')
+            ```
+
+        3. Add `onnxruntime-react-native` to CocoaPods dependencies.
+
+            In `<SOURCE_ROOT>/ios/Podfile`, add the following line to section `target 'OrtReactNativeHelloWorld'`:
+            ```
+            pod 'onnxruntime-react-native', :path => '../node_modules/onnxruntime-react-native'
+            ```
+
+            Run the following command in `<SOURCE_ROOT>/ios` to install:
+            ```sh
+            pod install
+            ```
 
 5. Add code in `App.tsx` to use onnxruntime-react-native.
 

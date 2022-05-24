@@ -1097,6 +1097,27 @@
     xcode "^3.0.1"
     xml2js "0.4.23"
 
+"@expo/config-plugins@^4.1.5":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.1.5.tgz#9d357d2cda9c095e511b51583ede8a3b76174068"
+  integrity sha512-RVvU40RtZt12HavuDAe+LDIq9lHj7sheOfMEHdmpJ/uTA8pgvkbc56XF6JHQD+yRr6+uhhb+JnAasGq49dsQbw==
+  dependencies:
+    "@expo/config-types" "^45.0.0"
+    "@expo/json-file" "8.2.36"
+    "@expo/plist" "0.0.18"
+    "@expo/sdk-runtime-versions" "^1.0.0"
+    "@react-native/normalize-color" "^2.0.0"
+    chalk "^4.1.2"
+    debug "^4.3.1"
+    find-up "~5.0.0"
+    getenv "^1.0.0"
+    glob "7.1.6"
+    resolve-from "^5.0.0"
+    semver "^7.3.5"
+    slash "^3.0.0"
+    xcode "^3.0.1"
+    xml2js "0.4.23"
+
 "@expo/config-types@^43.0.1":
   version "43.0.1"
   resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-43.0.1.tgz#3e047dccb371741a540980eaff26fb0c95039c30"
@@ -4193,11 +4214,12 @@ onnxruntime-common@~1.12.0-dev.20220505-084165c74:
   resolved "https://registry.yarnpkg.com/onnxruntime-common/-/onnxruntime-common-1.12.0-dev.20220505-084165c74.tgz#699e1f55a896d312694046d1175980473b054eb5"
   integrity sha512-Za1eJYH445ErJwYo7oeyJibanIzCGEQ/krlEqCJtKO62ONbLonleOUOahR39wks/UtzBBxIedHPVQ9qoI0icjw==
 
-onnxruntime-react-native@^1.12.0-dev.20220510-3437967e6:
-  version "1.12.0-dev.20220510-3437967e6"
-  resolved "https://registry.yarnpkg.com/onnxruntime-react-native/-/onnxruntime-react-native-1.12.0-dev.20220510-3437967e6.tgz#e3cff24898de7fad1282180d5c2ab48a01fb6da6"
-  integrity sha512-HDujJz/B9QH0HspJLIh1FKpRfiQJPRsvBg+sAYPyCjEJHHuOK4gfnYVmaYRjhLOTn/5+kZJYTSfXcXSCvJJH+A==
+onnxruntime-react-native@1.12.0-dev.20220517-4dd3cc40c:
+  version "1.12.0-dev.20220517-4dd3cc40c"
+  resolved "https://registry.yarnpkg.com/onnxruntime-react-native/-/onnxruntime-react-native-1.12.0-dev.20220517-4dd3cc40c.tgz#f6fb3ab1b750bd9bf355ed17d601e28193431870"
+  integrity sha512-mGxQPzsfqXOY9/G6FNRLeh81tHnAHvdraJwX/tL6gG8qMriL6kvReJavzlwEcPZKKGk7ruLIljOyWi2bo6oPlg==
   dependencies:
+    "@expo/config-plugins" "^4.1.5"
     buffer "^6.0.3"
     onnxruntime-common "~1.12.0-dev.20220505-084165c74"
 
