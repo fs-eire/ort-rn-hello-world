@@ -2,6 +2,7 @@
   "name": "ort-rn-hello-world",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "onnxruntime-package-name": "onnxruntime-ext",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
